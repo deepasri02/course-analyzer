@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Welcome Page -->
+  <section id="welcome-page" class="section">
+    <h1>Welcome to Course Analyzer 🎓</h1>
+    <p>Select a course, learn with tutorials, and test your knowledge!</p>
+    <button onclick="goToCourses()">Get Started</button>
+  </section>
+
+  <!-- Course Selection -->
+  <section id="course-selection" class="section" style="display:none;">
+    <h2>Select a Course</h2>
+    <ul id="course-list" class="course-list"></ul>
+  </section>
+
+  <!-- Topic Selection -->
+  <section id="topic-selection" class="section" style="display:none;">
+    <h2>Select a Topic</h2>
+    <ul id="topic-list" class="topic-list"></ul>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video-section" class="section" style="display:none;">
+    <h2>Video Tutorial</h2>
+    <div class="video-container">
+      <iframe id="tutorial-video" width="800" height="450" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- ✅ Start button calls startQuiz -->
+    <button id="start-btn" onclick="startQuiz()">Start Quiz</button>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz-section" class="section" style="display:none;">
+    <h2>Quiz</h2>
+    <p id="progress"></p>
+    <div id="question-container" class="question-container"></div>
+  </section>
+
+  <!-- Result Section -->
+  <section id="result-section" class="section" style="display:none;">
+    <h2>Result</h2>
+    <img id="doll" src="" alt="Doll Animation" width="250" class="doll-animation">
+    <p id="result-message" class="result-message"></p>
+    <button onclick="restart()">Back to Courses</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
